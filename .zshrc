@@ -13,6 +13,6 @@ if [[ -e /usr/share/zsh/manjaro-zsh-prompt ]]; then
   source /usr/share/zsh/manjaro-zsh-prompt
 fi
 
-if [[ -e $HOME/.zsh/aliases.zsh ]]; then
-    source $HOME/.zsh/aliases.zsh
+if [[ -e $HOME/.zsh/alias.zsh ]]; then
+    source $HOME/.zsh/alias.zsh
 fi
