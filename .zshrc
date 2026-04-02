@@ -24,3 +24,12 @@ if [[ -d $HOME/.zsh/plugins ]]; then
         fi
     done
 fi
+
+if [[ -d $HOME/.zsh/functions ]]; then
+    fpath=( $HOME/.zsh/functions "$fpath[@]")
+    for func in $HOME/.zsh/functions/*; do
+        if [[ -f $func ]]; then
+            autoload -Uz "$func"
+        fi
+    done
+fi
