@@ -11,6 +11,10 @@ if [[ -e $HOME/.zsh/prompt.zsh ]]; then
     source $HOME/.zsh/prompt.zsh
 fi
 
+if [[ -e $HOME/.zsh/ls-colors.zsh ]]; then
+    source $HOME/.zsh/ls-colors.zsh
+fi
+
 if [[ -d $HOME/.zsh/plugins ]]; then
     for plugin in $HOME/.zsh/plugins/*; do
         if [[ -f $plugin ]]; then
