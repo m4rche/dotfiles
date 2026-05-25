@@ -1,0 +1,5 @@
+configuration {
+  modes: [ drun ];
+}
+
+@theme "launchers/type-1/style-5.rasi"
