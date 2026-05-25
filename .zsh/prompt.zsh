@@ -15,7 +15,7 @@ virtualenv_prompt() {
 
 git_branch_prompt() {
   branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-  [[ -n "$branch" ]] && echo "%F{208}[$branch]%f"
+  [[ -n "$branch" ]] && echo "${GREEN}[$branch]${RESET}"
 }
 
 PROMPT="${WHITE}┌──(${USER_COLOR}%n@%m${WHITE})-[%~]$(virtualenv_prompt)$(git_branch_prompt)
