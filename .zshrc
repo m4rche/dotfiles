@@ -1,7 +1,6 @@
-HISTFILE=$HOME/.zsh_history
-HISTSIZE=10000
-SAVEHIST=1000
-setopt -o sharehistory
+if [[ -e $HOME/.zsh/history.zsh ]]; then
+    source $HOME/.zsh/history.zsh
+fi
 
 if [[ -e $HOME/.zsh/alias.zsh ]]; then
     source $HOME/.zsh/alias.zsh
