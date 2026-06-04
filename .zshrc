@@ -1,23 +1,3 @@
-if [[ -e $HOME/.zsh/history.zsh ]]; then
-    source $HOME/.zsh/history.zsh
-fi
-
-if [[ -e $HOME/.zsh/alias.zsh ]]; then
-    source $HOME/.zsh/alias.zsh
-fi
-
-if [[ -e $HOME/.zsh/prompt.zsh ]]; then
-    source $HOME/.zsh/prompt.zsh
-fi
-
-if [[ -e $HOME/.zsh/ls-colors.zsh ]]; then
-    source $HOME/.zsh/ls-colors.zsh
-fi
-
-if [[ -d $HOME/.zsh/plugins ]]; then
-    for plugin in $HOME/.zsh/plugins/*; do
-        if [[ -f $plugin ]]; then
-            source "$plugin"
-        fi
-    done
-fi
+for f in $(find $HOME/.zsh -type f -name "*.zsh"); do
+	source "$f"
+done
